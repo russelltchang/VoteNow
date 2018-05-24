@@ -13,7 +13,7 @@ var url = process.env.MONGOLAB_URI || process.env.MONGODB_URI;
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/dist')); 
-app.use(session({secret: process.env.SESSIONS_SECRET, resave: false, saveUninitialized: false, store: new MongoStore({url: url})}));
+app.use(session({secret: process.env.SESSIONS_SECRET, resave: false, saveUninitialized: false, store: new MongoStore({url: url,  collection: 'sessions'})}));
 
 app.get('/', (req, res) => {
     console.log('/home '+ req.session.id);
