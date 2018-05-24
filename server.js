@@ -9,11 +9,11 @@ var mongodb = require('mongodb');
 var ObjectId = require('mongodb').ObjectID;
 var MongoClient = require('mongodb').MongoClient;
 var MongoStore = require('connect-mongo')(session);
-var url = process.env.MONGOLAB_URI;
+var url = process.env.MONGOLAB_URI || process.env.MONGODB_URI;
 app.use(bodyParser.urlencoded({extended: true})); 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/dist')); 
-app.use(session({secret: process.env.SESSIONS_SECRET, resave: false, saveUninitialized: false, store: new MongoStore({url: process.env.MONGOLAB_URI})}));
+app.use(session({secret: process.env.SESSIONS_SECRET, resave: false, saveUninitialized: false, store: new MongoStore({url: url})}));
 
 app.get('/', (req, res) => {
     console.log('/home '+ req.session.id);
@@ -41,7 +41,6 @@ app.post('/signup', (req, res) => {
         });
     });
 });
-
 
 app.post('/login', (req, res)=>{
     MongoClient.connect(url, function(err, database) {
