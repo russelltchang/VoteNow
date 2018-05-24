@@ -2,10 +2,10 @@
   "name": "Voting",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open --history-api-fallback",
+    "start": "node server.js",
     "build": "webpack --mode production"
   },
   "keywords": [],
