@@ -127,7 +127,7 @@ app.post('/addvote', (req, res)=>{
         var vote = req.body.vote;
         var index = req.body.index;
         MongoClient.connect(url, function(err, database) {
-            database.db('voting').collection('polls').update({"title": title}, {$inc : {['count.' + index] : 1}}    );
+            database.db('voting').collection('polls').update({"title": title}, {$inc : {['count.' + index] : 1}});
             database.db('voting').collection('polls').find({"title": title}).toArray(function(err, data) {
                 if (err) console.log(err);
                 res.send(data);
