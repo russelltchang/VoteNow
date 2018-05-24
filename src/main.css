@@ -1,0 +1,187 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+* {
+    font-family: 'Arial';
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+  
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+.navbar {
+    background-color: lightgrey !important;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.link, .link:hover {
+    color: blue;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
+
+#signup, #login, #createpoll, #mypolls, #logout {
+    display: inline;
+    font-size: 24px;
+    margin-left: 3vw;
+    color: white;
+}
+
+#home {
+    margin-right: auto;
+    display: inline;
+    font-size: 24px;
+    color: white;
+}
+
+.login, .signup, #newpoll {
+    margin-top: 20vh;
+}
+
+#description {
+    width: 50vw;
+    margin: auto;
+    font-family: Montserrat !important;
+}
+
+#signUpForm, #logInForm, {
+    background: lightgrey;
+    width: 20vw;
+    height: 20vh;
+    margin: auto;
+}
+
+#newPollForm {
+    background: lightgrey;
+    padding: 2vh;
+    width: 20vw;
+    margin: auto;
+}
+
+#username, #password, #signUpSubmit, #logInSubmit, #newPollSubmit, #newOption {
+    margin-top: 2vh;
+    width: 15vw;
+}
+
+#message {
+    margin-top: 2vh !important;
+    color: red;
+    background: rgb(228, 204, 204);
+    width: 15vw;
+    margin: auto;
+    border: 1px solid red;
+    border-radius: 3px;
+}
+
+#message:empty {
+    border: none;
+}
+
+#title, .option {
+    margin-top: 2vh;
+    width: 15vw;
+}
+
+#container {
+    text-align: center;
+}
+
+#header {
+    background-color: orange;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Lobster';
+}
+
+.card {
+    background-color: lightgrey;
+    margin-top: 6vh;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.card-block {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-footer {
+    vertical-align: middle;
+    background: orange;
+}
+
+.pollName {
+    font-family: Lobster;
+    margin-right: auto;
+    margin-left: 1vw;
+}
+
+.view {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1vw;
+    box-shadow: 3px 5px 4px #888888;
+}
+
+.btn, .btn:hover, .btn:active {
+    background-color: rgb(255, 152, 0) !important;
+    border: none;
+}
+
+i {
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+.form-control, #voteButton {
+    width: 40vw;
+    margin: auto;
+}
+
+#pollInfo {
+    margin-top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart, #addVoteForm {
+    width: 50vw;
+    display: inline-block;
+}   
+
+canvas {
+    width: 100% !important;
+    height: auto;
+}
