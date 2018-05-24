@@ -136,7 +136,7 @@ app.post('/addvote', (req, res)=>{
     }
 });
 
-var port = 3000 || process.env.PORT;
+var port = process.env.PORT || 3000;
 app.listen(port, ()=> {
     console.log('App is listening at ' + port);
 });
